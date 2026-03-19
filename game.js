@@ -247,6 +247,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const input = document.getElementById("guessInput");
   const suggestions = document.getElementById("suggestions");
   const submitButton = document.getElementById("submitGuess");
+  const revealedDriverStats = document.getElementById("revealedDriverStats");
 
   renderStats();
 
@@ -400,14 +401,35 @@ document.addEventListener("DOMContentLoaded", () => {
     debut: compareNumber(guess.firstWRCStart, chosenDriver.firstWRCStart)
     };
   }
+
   function isWin(result) {
-  return (
-    result.nationality.class === "correct" &&
-    result.manufacturer.class === "correct" &&
-    result.titles.class === "correct" &&
-    result.wins.class === "correct" &&
-    result.debut.class === "correct"
-  );
+    return (
+      result.nationality.class === "correct" &&
+      result.manufacturer.class === "correct" &&
+      result.titles.class === "correct" &&
+      result.wins.class === "correct" &&
+      result.debut.class === "correct"
+    );
+  }
+
+  function formatDriverStats(driver) {
+    if (!driver) return "";
+
+    const manufacturersText = Array.isArray(driver.manufacturers)
+      ? driver.manufacturers.join(", ")
+      : driver.manufacturer;
+
+    return `
+      <div class="revealed-driver">
+        <h3>${driver.name}</h3>
+        <p><strong>Nationality:</strong> ${driver.nationality}</p>
+        <p><strong>Current Team/Manufacturer:</strong> ${driver.manufacturer}</p>
+        <p><strong>Previous Teams/Manufacturers:</strong> ${manufacturersText}</p>
+        <p><strong>Titles:</strong> ${driver.titles}</p>
+        <p><strong>Wins:</strong> ${driver.wins}</p>
+        <p><strong>Debut:</strong> ${driver.firstWRCStart}</p>
+      </div>
+    `;
   }
 
   function renderGuess(result) {
@@ -567,6 +589,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="dist-row"><span>5</span><div class="dist-bar" style="width:${(distribution[5] || 0) * 20 + 20}px;">${distribution[5] || 0}</div></div>
       <div class="dist-row"><span>6</span><div class="dist-bar" style="width:${(distribution[6] || 0) * 20 + 20}px;">${distribution[6] || 0}</div></div>
     `;
+
+    revealedDriverStats.innerHTML = formatDriverStats(chosenDriver);
   }
 
   // Guess Button listener
