@@ -1,0 +1,1562 @@
+[
+{
+  "id": "mcerlean_josh",
+  "name": "Josh McErlean",
+  "nationality": "Ireland",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport"],
+  "firstWRCStart": 2019,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "armstrong_jon",
+  "name": "Jon Armstrong",
+  "nationality": "Ireland",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport"],
+  "firstWRCStart": 2015,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "lappi_esapekka",
+  "name": "Esapekka Lappi",
+  "nationality": "Finland",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai", "M-Sport", "Citroën", "Toyota", "Škoda"],
+  "firstWRCStart": 2011,
+  "titles": 0,
+  "wins": 2
+},
+{
+  "id": "sordo_dani",
+  "name": "Dani Sordo",
+  "nationality": "Spain",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai", "Ford", "Mini", "Citroën", "Kronos Citroën"],
+  "firstWRCStart": 2003,
+  "titles": 0,
+  "wins": 3
+},
+{
+  "id": "fourmaux_adrien",
+  "name": "Adrien Fourmaux",
+  "nationality": "France",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai", "M-Sport"],
+  "firstWRCStart": 2019,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "neuville_thierry",
+  "name": "Thierry Neuville",
+  "nationality": "Belgium",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai", "Qatar WRT", "Citroën"],
+  "firstWRCStart": 2009,
+  "titles": 1,
+  "wins": 22
+},
+{
+  "id": "paddon_hayden",
+  "name": "Hayden Paddon",
+  "nationality": "New Zealand",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai", "M-Sport"],
+  "firstWRCStart": 2007,
+  "titles": 0,
+  "wins": 1
+},
+{
+  "id": "ogier_sebastien",
+  "name": "Sébastien Ogier",
+  "nationality": "France",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota", "M-Sport", "Volkswagen", "Citroën"],
+  "firstWRCStart": 2008,
+  "titles": 9,
+  "wins": 67
+},
+{
+  "id": "katsuta_takamoto",
+  "name": "Takamoto Katsuta",
+  "nationality": "Japan",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota"],
+  "firstWRCStart": 2016,
+  "titles": 0,
+  "wins": 1
+},
+{
+  "id": "evans_elfyn",
+  "name": "Elfyn Evans",
+  "nationality": "United Kingdom",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota", "M-Sport"],
+  "firstWRCStart": 2007,
+  "titles": 0,
+  "wins": 12
+},
+{
+  "id": "solberg_oliver",
+  "name": "Oliver Solberg",
+  "nationality": "Sweden",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota", "Hyundai"],
+  "firstWRCStart": 2019,
+  "titles": 0,
+  "wins": 2
+},
+{
+  "id": "pajari_sami",
+  "name": "Sami Pajari",
+  "nationality": "Finland",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota"],
+  "firstWRCStart": 2019,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "munster_gregoire",
+  "name": "Grégoire Munster",
+  "nationality": "Luxembourg",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport"],
+  "firstWRCStart": 2019,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "tanak_ott",
+  "name": "Ott Tänak",
+  "nationality": "Estonia",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai", "M-Sport", "Toyota", "DMACK WRT"],
+  "firstWRCStart": 2009,
+  "titles": 1,
+  "wins": 22
+},
+{
+  "id": "rovanpera_kalle",
+  "name": "Kalle Rovanperä",
+  "nationality": "Finland",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota"],
+  "firstWRCStart": 2017,
+  "titles": 2,
+  "wins": 18
+},
+{
+  "id": "mikkelsen_andreas",
+  "name": "Andreas Mikkelsen",
+  "nationality": "Norway",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai", "Citroën", "Škoda", "Volkswagen", "M-Sport"],
+  "firstWRCStart": 2006,
+  "titles": 0,
+  "wins": 3
+},
+{
+  "id": "loubet_pierrelouis",
+  "name": "Pierre-Louis Loubet",
+  "nationality": "France",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport", "Hyundai 2C Compétition"],
+  "firstWRCStart": 2015,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "suninen_teemu",
+  "name": "Teemu Suninen",
+  "nationality": "Finland",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai", "M-Sport"],
+  "firstWRCStart": 2014,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "breen_craig",
+  "name": "Craig Breen",
+  "nationality": "Ireland",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai", "M-Sport", "Citroën"],
+  "firstWRCStart": 2009,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "latvala_jarimatti",
+  "name": "Jari-Matti Latvala",
+  "nationality": "Finland",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota", "Volkswagen", "Ford", "M-Sport"],
+  "firstWRCStart": 2002,
+  "titles": 0,
+  "wins": 18
+},
+{
+  "id": "loeb_sebastien",
+  "name": "Sébastien Loeb",
+  "nationality": "France",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport", "Hyundai", "Kronos Citroën", "Citroën"],
+  "firstWRCStart": 1999,
+  "titles": 9,
+  "wins": 80
+},
+{
+  "id": "greensmith_gus",
+  "name": "Gus Greensmith",
+  "nationality": "United Kingdom",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport"],
+  "firstWRCStart": 2014,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "solans_nil",
+  "name": "Nil Solans",
+  "nationality": "Spain",
+  "manufacturer": "Hyundai 2C Compétition",
+  "manufacturers": ["Hyundai 2C Compétition"],
+  "firstWRCStart": 2012,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "veiby_ole_christian",
+  "name": "Ole Christian Veiby",
+  "nationality": "Norway",
+  "manufacturer": "Hyundai 2C Compétition",
+  "manufacturers": ["Hyundai 2C Compétition"],
+  "firstWRCStart": 2014,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "solberg_petter",
+  "name": "Petter Solberg",
+  "nationality": "Norway",
+  "manufacturer": "Ford",
+  "manufacturers": ["Ford", "Petter Solberg WRT", "Citroën", "Subaru"],
+  "firstWRCStart": 1998,
+  "titles": 1,
+  "wins": 13
+},
+{
+  "id": "tidemand_pontus",
+  "name": "Pontus Tidemand",
+  "nationality": "Sweden",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport"],
+  "firstWRCStart": 2012,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "meeke_kris",
+  "name": "Kris Meeke",
+  "nationality": "United Kingdom",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota", "Citroën", "Mini"],
+  "firstWRCStart": 2002,
+  "titles": 0,
+  "wins": 5
+},
+{
+  "id": "gronholm_marcus",
+  "name": "Marcus Grönholm",
+  "nationality": "Finland",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport", "Ford", "Peugeot", "Mitsubishi Ralliart", "SEAT", "Toyota"],
+  "firstWRCStart": 1989,
+  "titles": 2,
+  "wins": 30
+},
+{
+  "id": "hanninen_juho",
+  "name": "Juho Hänninen",
+  "nationality": "Finland",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota", "Hyundai", "Qatar WRT"],
+  "firstWRCStart": 2006,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "bouffier_bryan",
+  "name": "Bryan Bouffier",
+  "nationality": "France",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport", "Hyundai"],
+  "firstWRCStart": 2007,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "ostberg_mads",
+  "name": "Mads Østberg",
+  "nationality": "Norway",
+  "manufacturer": "Citroën",
+  "manufacturers": ["Citroën", "M-Sport", "Adapta WRT"],
+  "firstWRCStart": 2006,
+  "titles": 0,
+  "wins": 1
+},
+{
+  "id": "al_qassimi_khalid",
+  "name": "Khalid Al Qassimi",
+  "nationality": "United Arab Emirates",
+  "manufacturer": "Citroën",
+  "manufacturers": ["Citroën", "Team Abu Dhabi", "Ford"],
+  "firstWRCStart": 2004,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "solberg_henning",
+  "name": "Henning Solberg",
+  "nationality": "Norway",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport", "Munchi's Ford", "OMV Peugeot Norway", "Ford"],
+  "firstWRCStart": 1998,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "block_ken",
+  "name": "Ken Block",
+  "nationality": "United States of America",
+  "manufacturer": "Monster WRT",
+  "manufacturers": ["Monster WRT"],
+  "firstWRCStart": 2007,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "alrajhi_yazeed",
+  "name": "Yazeed Al-Rajhi",
+  "nationality": "Saudi Arabia",
+  "manufacturer": "Yazeed Racing",
+  "manufacturers": ["Yazeed Racing"],
+  "firstWRCStart": 2007,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "prokop_martin",
+  "name": "Martin Prokop",
+  "nationality": "Czech Republic",
+  "manufacturer": "Jipocar Czech",
+  "manufacturers": ["Jipocar Czech"],
+  "firstWRCStart": 2005,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "lefebvre_stephane",
+  "name": "Stéphane Lefebvre",
+  "nationality": "France",
+  "manufacturer": "Citroën",
+  "manufacturers": ["Citroën"],
+  "firstWRCStart": 2013,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "abbring_kevin",
+  "name": "Kevin Abbring",
+  "nationality": "Netherlands",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai"],
+  "firstWRCStart": 2007,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "camilli_eric",
+  "name": "Eric Camilli",
+  "nationality": "France",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport"],
+  "firstWRCStart": 2014,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "kubica_robert",
+  "name": "Robert Kubica",
+  "nationality": "Poland",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport", "Citroën"],
+  "firstWRCStart": 2013,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "solowow_michal",
+  "name": "Michał Sołowow",
+  "nationality": "Poland",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport"],
+  "firstWRCStart": 2003,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "sarrazin_stephane",
+  "name": "Stéphane Sarrazin",
+  "nationality": "France",
+  "manufacturer": "Subaru",
+  "manufacturers": ["Subaru"],
+  "firstWRCStart": 2004,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "hirvonen_mikko",
+  "name": "Mikko Hirvonen",
+  "nationality": "Finland",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport", "Citroën", "Ford", "Škoda", "Subaru"],
+  "firstWRCStart": 2002,
+  "titles": 0,
+  "wins": 15
+},
+{
+  "id": "atkinson_chris",
+  "name": "Chris Atkinson",
+  "nationality": "Australia",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai", "Citroën", "Mini Portugal", "Qatar WRT", "Subaru"],
+  "firstWRCStart": 2004,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "kuipers_dennis",
+  "name": "Dennis Kuipers",
+  "nationality": "Netherlands",
+  "manufacturer": "FERM Power Tools",
+  "manufacturers": ["FERM Power Tools"],
+  "firstWRCStart": 2008,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "delecour_francois",
+  "name": "François Delecour",
+  "nationality": "France",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport", "Mitsubishi Ralliart", "Ford", "Peugeot"],
+  "firstWRCStart": 1984,
+  "titles": 0,
+  "wins": 4
+},
+{
+  "id": "novikov_evgeny",
+  "name": "Evgeny Novikov",
+  "nationality": "Russia",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport", "Team Abu Dhabi", "Citroën"],
+  "firstWRCStart": 2007,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "kosciuszko_michal",
+  "name": "Michał Kościuszko",
+  "nationality": "Poland",
+  "manufacturer": "Lotos Team",
+  "manufacturers": ["Lotos Team"],
+  "firstWRCStart": 2006,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "wilson_matthew",
+  "name": "Matthew Wilson",
+  "nationality": "United Kingdom",
+  "manufacturer": "Qatar WRT",
+  "manufacturers": ["Qatar WRT", "M-Sport"],
+  "firstWRCStart": 2004,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "pozzo_gabriel",
+  "name": "Gabriel Pozzo",
+  "nationality": "Argentina",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda"],
+  "firstWRCStart": 1998,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "andersson_pergunnar",
+  "name": "Per-Gunnar Andersson",
+  "nationality": "Sweden",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport", "Suzuki"],
+  "firstWRCStart": 2002,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "oliveira_daniel",
+  "name": "Daniel Oliveira",
+  "nationality": "Brazil",
+  "manufacturer": "Brazil WRT",
+  "manufacturers": ["Brazil WRT"],
+  "firstWRCStart": 2009,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "alattiyah_nasser",
+  "name": "Nasser Al-Attiyah",
+  "nationality": "Qatar",
+  "manufacturer": "Qatar WRT",
+  "manufacturers": ["Qatar WRT"],
+  "firstWRCStart": 2004,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "weijs_hans",
+  "name": "Hans Weijs",
+  "nationality": "Netherlands",
+  "manufacturer": "Qatar WRT",
+  "manufacturers": ["Qatar WRT"],
+  "firstWRCStart": 2006,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "powell_john",
+  "name": "John Powell",
+  "nationality": "Trinidad and Tobago",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport"],
+  "firstWRCStart": 2012,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "habig_jannie",
+  "name": "Jannie Habig",
+  "nationality": "South Africa",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport"],
+  "firstWRCStart": 1994,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "stohl_manfred",
+  "name": "Manfred Stohl",
+  "nationality": "Austria",
+  "manufacturer": "Brazil WRT",
+  "manufacturers": ["Brazil WRT", "Kronos Citroën", "OMV Peugeot Norway", "Hyundai"],
+  "firstWRCStart": 1991,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "brynildsen_eyvind",
+  "name": "Eyvind Brynildsen",
+  "nationality": "Norway",
+  "manufacturer": "Adapta WRT",
+  "manufacturers": ["Adapta WRT"],
+  "firstWRCStart": 2006,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "araujo_armindo",
+  "name": "Armindo Araújo",
+  "nationality": "Portugal",
+  "manufacturer": "Mini Portugal",
+  "manufacturers": ["Mini Portugal", "Armindo Araújo WRT"],
+  "firstWRCStart": 2001,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "nobre_paulo",
+  "name": "Paulo Nobre",
+  "nationality": "Brazil",
+  "manufacturer": "Mini Portugal",
+  "manufacturers": ["Mini Portugal", "Palmeirinha Rally"],
+  "firstWRCStart": 2006,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "campana_pierre",
+  "name": "Pierre Campana",
+  "nationality": "France",
+  "manufacturer": "Mini",
+  "manufacturers": ["Mini"],
+  "firstWRCStart": 2006,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "van_merksteijn_sr_peter",
+  "name": "Peter van Merksteijn Sr.",
+  "nationality": "Netherlands",
+  "manufacturer": "Van Merksteijn Motorsport",
+  "manufacturers": ["Van Merksteijn Motorsport"],
+  "firstWRCStart": 2007,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "van_merksteijn_jr_peter",
+  "name": "Peter van Merksteijn Jr.",
+  "nationality": "Netherlands",
+  "manufacturer": "Van Merksteijn Motorsport",
+  "manufacturers": ["Van Merksteijn Motorsport"],
+  "firstWRCStart": 2007,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "lindholm_sebastian",
+  "name": "Sebastian Lindholm",
+  "nationality": "Finland",
+  "manufacturer": "Peugeot",
+  "manufacturers": ["Peugeot"],
+  "firstWRCStart": 1984,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "raikkonen_kimi",
+  "name": "Kimi Räikkönen",
+  "nationality": "Finland",
+  "manufacturer": "Ice 1",
+  "manufacturers": ["Ice 1", "Citroën"],
+  "firstWRCStart": 2009,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "burkart_aaron",
+  "name": "Aaron Burkart",
+  "nationality": "Germany",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport"],
+  "firstWRCStart": 2003,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "villagra_federico",
+  "name": "Federico Villagra",
+  "nationality": "Argentina",
+  "manufacturer": "Munchi's Ford",
+  "manufacturers": ["Munchi's Ford"],
+  "firstWRCStart": 1998,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "kuipers_rene",
+  "name": "René Kuipers",
+  "nationality": "Netherlands",
+  "manufacturer": "FERM Power Tools",
+  "manufacturers": ["FERM Power Tools"],
+  "firstWRCStart": 2000,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "duval_francois",
+  "name": "François Duval",
+  "nationality": "Belgium",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport", "Kronos Citroën", "Citroën", "Ford"],
+  "firstWRCStart": 2001,
+  "titles": 0,
+  "wins": 1
+},
+{
+  "id": "kankkunen_juha",
+  "name": "Juha Kankkunen",
+  "nationality": "Finland",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai", "Subaru", "Ford", "Toyota", "Lancia", "Peugeot"],
+  "firstWRCStart": 1979,
+  "titles": 4,
+  "wins": 23
+},
+{
+  "id": "aava_urmo",
+  "name": "Urmo Aava",
+  "nationality": "Estonia",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport"],
+  "firstWRCStart": 2002,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "rautenbach_conrad",
+  "name": "Conrad Rautenbach",
+  "nationality": "Zimbabwe",
+  "manufacturer": "Citroën",
+  "manufacturers": ["Citroën"],
+  "firstWRCStart": 2004,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "gardemeister_toni",
+  "name": "Toni Gardemeister",
+  "nationality": "Finland",
+  "manufacturer": "Suzuki",
+  "manufacturers": ["Suzuki", "Ford", "Škoda", "Mitsubishi Ralliart", "SEAT"],
+  "firstWRCStart": 1996,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "galli_gigi",
+  "name": "Gigi Galli",
+  "nationality": "Italy",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport", "Mitsubishi Ralliart"],
+  "firstWRCStart": 1998,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "perez_companc_luis",
+  "name": "Luis Pérez Companc",
+  "nationality": "Argentina",
+  "manufacturer": "Munchi's Ford",
+  "manufacturers": ["Munchi's Ford", "M-Sport", "Ford"],
+  "firstWRCStart": 2001,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "clark_barry",
+  "name": "Barry Clark",
+  "nationality": "United Kingdom",
+  "manufacturer": "Munchi's Ford",
+  "manufacturers": ["Munchi's Ford"],
+  "firstWRCStart": 2003,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "vovos_armodios",
+  "name": "Armodios Vovos",
+  "nationality": "Greece",
+  "manufacturer": "Munchi's Ford",
+  "manufacturers": ["Munchi's Ford"],
+  "firstWRCStart": 1987,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "carlsson_daniel",
+  "name": "Daniel Carlsson",
+  "nationality": "Sweden",
+  "manufacturer": "Kronos Citroën",
+  "manufacturers": ["Kronos Citroën", "Peugeot"],
+  "firstWRCStart": 1999,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "raies_juan_pablo",
+  "name": "Juan Pablo Raies",
+  "nationality": "Argentina",
+  "manufacturer": "Munchi's Ford",
+  "manufacturers": ["Munchi's Ford"],
+  "firstWRCStart": 1992,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "jonsson_mats",
+  "name": "Mats Jonsson",
+  "nationality": "Sweden",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota", "Opel"],
+  "firstWRCStart": 1979,
+  "titles": 0,
+  "wins": 2
+},
+{
+  "id": "pons_xavier",
+  "name": "Xavier Pons",
+  "nationality": "Spain",
+  "manufacturer": "Kronos Citroën",
+  "manufacturers": ["Kronos Citroën"],
+  "firstWRCStart": 2003,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "sohlberg_kristian",
+  "name": "Kristian Sohlberg",
+  "nationality": "Finland",
+  "manufacturer": "Mitsubishi Ralliart",
+  "manufacturers": ["Mitsubishi Ralliart"],
+  "firstWRCStart": 2000,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "kopecky_jan",
+  "name": "Jan Kopecký",
+  "nationality": "Czech Republic",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda"],
+  "firstWRCStart": 2002,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "bernardi_nicolas",
+  "name": "Nicolas Bernardi",
+  "nationality": "France",
+  "manufacturer": "Peugeot",
+  "manufacturers": ["Peugeot"],
+  "firstWRCStart": 1998,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "mcrae_colin",
+  "name": "Colin McRae",
+  "nationality": "United Kingdom",
+  "manufacturer": "Kronos Citroën",
+  "manufacturers": ["Kronos Citroën", "Škoda", "Citroën", "Ford", "Subaru"],
+  "firstWRCStart": 1987,
+  "titles": 1,
+  "wins": 25
+},
+{
+  "id": "katajamaki_kosti",
+  "name": "Kosti Katajamäki",
+  "nationality": "Finland",
+  "manufacturer": "M-Sport",
+  "manufacturers": ["M-Sport"],
+  "firstWRCStart": 2001,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "panizzi_gilles",
+  "name": "Gilles Panizzi",
+  "nationality": "France",
+  "manufacturer": "Red Bull Škoda",
+  "manufacturers": ["Red Bull Škoda", "Mitsubishi Ralliart", "Peugeot"],
+  "firstWRCStart": 1990,
+  "titles": 0,
+  "wins": 7
+},
+{
+  "id": "aigner_andreas",
+  "name": "Andreas Aigner",
+  "nationality": "Austria",
+  "manufacturer": "Red Bull Škoda",
+  "manufacturers": ["Red Bull Škoda"],
+  "firstWRCStart": 2005,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "rovanpera_harri",
+  "name": "Harri Rovanperä",
+  "nationality": "Finland",
+  "manufacturer": "Red Bull Škoda",
+  "manufacturers": ["Red Bull Škoda", "Mitsubishi Ralliart", "Peugeot", "SEAT"],
+  "firstWRCStart": 1993,
+  "titles": 0,
+  "wins": 1
+},
+{
+  "id": "ekstrom_mattias",
+  "name": "Mattias Ekström",
+  "nationality": "Sweden",
+  "manufacturer": "Red Bull Škoda",
+  "manufacturers": ["Red Bull Škoda", "Škoda"],
+  "firstWRCStart": 1999,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "higgins_mark",
+  "name": "Mark Higgins",
+  "nationality": "United Kingdom",
+  "manufacturer": "Ford",
+  "manufacturers": ["Ford"],
+  "firstWRCStart": 1990,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "valimaki_jussi",
+  "name": "Jussi Välimäki",
+  "nationality": "Finland",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai"],
+  "firstWRCStart": 1998,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "bengue_alexandre",
+  "name": "Alexandre Bengué",
+  "nationality": "France",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda"],
+  "firstWRCStart": 1999,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "arai_toshi",
+  "name": "Toshi Arai",
+  "nationality": "Japan",
+  "manufacturer": "Subaru",
+  "manufacturers": ["Subaru"],
+  "firstWRCStart": 1997,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "radstron_thomas",
+  "name": "Thomas Rådström",
+  "nationality": "Sweden",
+  "manufacturer": "Mitsubishi Ralliart",
+  "manufacturers": ["Mitsubishi Ralliart", "Ford", "Toyota"],
+  "firstWRCStart": 1989,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "sainz_sr_carlos",
+  "name": "Carlos Sainz Sr.",
+  "nationality": "Spain",
+  "manufacturer": "Citroën",
+  "manufacturers": ["Citroën", "Ford", "Toyota", "Subaru", "Lancia"],
+  "firstWRCStart": 1987,
+  "titles": 2,
+  "wins": 26
+},
+{
+  "id": "kresta_roman",
+  "name": "Roman Kresta",
+  "nationality": "Czech Republic",
+  "manufacturer": "Ford",
+  "manufacturers": ["Ford", "Škoda"],
+  "firstWRCStart": 2001,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "sola_daniel",
+  "name": "Daniel Solà",
+  "nationality": "Spain",
+  "manufacturer": "Ford",
+  "manufacturers": ["Ford", "Mitsubishi Ralliart"],
+  "firstWRCStart": 1997,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "warmbold_antony",
+  "name": "Antony Warmbold",
+  "nationality": "Germany",
+  "manufacturer": "Ford",
+  "manufacturers": ["Ford"],
+  "firstWRCStart": 2000,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "martin_markko",
+  "name": "Markko Märtin",
+  "nationality": "Estonia",
+  "manufacturer": "Peugeot",
+  "manufacturers": ["Peugeot", "Ford", "Subaru"],
+  "firstWRCStart": 1997,
+  "titles": 0,
+  "wins": 5
+},
+{
+  "id": "schwarz_armin",
+  "name": "Armin Schwarz",
+  "nationality": "Germany",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda", "Hyundai", "Ford", "Toyota", "Mitsubishi Ralliart"],
+  "firstWRCStart": 1998,
+  "titles": 0,
+  "wins": 1
+},
+{
+  "id": "tuohino_janne",
+  "name": "Janne Tuohino",
+  "nationality": "Finland",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda", "Ford"],
+  "firstWRCStart": 1996,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "paasonen_jani",
+  "name": "Jani Paasonen",
+  "nationality": "Finland",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda", "Mitsubishi Ralliart"],
+  "firstWRCStart": 1997,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "auriol_didier",
+  "name": "Didier Auriol",
+  "nationality": "France",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda", "Peugeot", "SEAT", "Toyota", "Subaru", "Lancia", "Ford", "Austin Rover"],
+  "firstWRCStart": 1984,
+  "titles": 1,
+  "wins": 20
+},
+{
+  "id": "loix_freddy",
+  "name": "Freddy Loix",
+  "nationality": "Belgium",
+  "manufacturer": "Peugeot",
+  "manufacturers": ["Peugeot", "Hyundai", "Mitsubishi Ralliart", "Toyota"],
+  "firstWRCStart": 1993,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "robert_cedric",
+  "name": "Cedric Robert",
+  "nationality": "France",
+  "manufacturer": "Peugeot",
+  "manufacturers": ["Peugeot"],
+  "firstWRCStart": 1999,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "burns_richard",
+  "name": "Richard Burns",
+  "nationality": "United Kingdom",
+  "manufacturer": "Peugeot",
+  "manufacturers": ["Peugeot", "Subaru", "Mitsubishi Ralliart"],
+  "firstWRCStart": 1990,
+  "titles": 1,
+  "wins": 10
+},
+{
+  "id": "makkinen_tommi",
+  "name": "Tommi Mäkinen",
+  "nationality": "Finland",
+  "manufacturer": "Subaru",
+  "manufacturers": ["Subaru", "Mitsubishi Ralliart", "Ford", "Lancia", "Nissan", "Mazda"],
+  "firstWRCStart": 1987,
+  "titles": 4,
+  "wins": 24
+},
+{
+  "id": "dale_justin",
+  "name": "Justin Dale",
+  "nationality": "United Kingdom",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai", "Mitsubishi Ralliart"],
+  "firstWRCStart": 2002,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "bugalski_philippe",
+  "name": "Philippe Bugalski",
+  "nationality": "France",
+  "manufacturer": "Citroën",
+  "manufacturers": ["Citroën", "Lancia"],
+  "firstWRCStart": 1984,
+  "titles": 0,
+  "wins": 2
+},
+{
+  "id": "vatanen_ari",
+  "name": "Ari Vatanen",
+  "nationality": "Finland",
+  "manufacturer": "Subaru",
+  "manufacturers": ["Subaru", "Ford", "Mitsubishi Ralliart", "BMW", "Peugeot", "Opel"],
+  "firstWRCStart": 1974,
+  "titles": 1,
+  "wins": 10
+},
+{
+  "id": "kuchar_tomasz",
+  "name": "Tomasz Kuchar",
+  "nationality": "Poland",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai"],
+  "firstWRCStart": 1999,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "laukkanen_tapio",
+  "name": "Tapio Laukkanen",
+  "nationality": "Finland",
+  "manufacturer": "Ford",
+  "manufacturers": ["Ford"],
+  "firstWRCStart": 1994,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "mcrae_alistair",
+  "name": "Alistair McRae",
+  "nationality": "United Kingdom",
+  "manufacturer": "Mitsubishi Ralliart",
+  "manufacturers": ["Mitsubishi Ralliart", "Hyundai", "Subaru"],
+  "firstWRCStart": 1991,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "mortl_achim",
+  "name": "Achim Mörtl",
+  "nationality": "Austria",
+  "manufacturer": "Subaru",
+  "manufacturers": ["Subaru"],
+  "firstWRCStart": 1997,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "eriksson_kenneth",
+  "name": "Kenneth Eriksson",
+  "nationality": "Sweden",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda", "Hyundai", "Subaru", "Mitsubishi Ralliart", "Toyota", "Volkswagen"],
+  "firstWRCStart": 1980,
+  "titles": 0,
+  "wins": 6
+},
+{
+  "id": "blomqvist_stig",
+  "name": "Stig Blomqvist",
+  "nationality": "Sweden",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda", "Ford", "Nissan", "Volkswagen", "Peugeot", "Audi", "Talbot", "Saab"],
+  "firstWRCStart": 1973,
+  "titles": 1,
+  "wins": 11
+},
+{
+  "id": "kahle_matthias",
+  "name": "Matthias Kahle",
+  "nationality": "Germany",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda"],
+  "firstWRCStart": 1999,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "kolberg_kristian",
+  "name": "Kristian Kolberg",
+  "nationality": "Norway",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai"],
+  "firstWRCStart": 2001,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "kolberg_thomas",
+  "name": "Thomas Kolberg",
+  "nationality": "Norway",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai"],
+  "firstWRCStart": 2001,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "barratt_natalie",
+  "name": "Natalie Barratt",
+  "nationality": "United Kingdom",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai"],
+  "firstWRCStart": 1998,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "puras_jesus",
+  "name": "Jesús Puras",
+  "nationality": "Spain",
+  "manufacturer": "Citroën",
+  "manufacturers": ["Citroën", "Lancia", "Mazda"],
+  "firstWRCStart": 1991,
+  "titles": 0,
+  "wins": 1
+},
+{
+  "id": "thiry_bruno",
+  "name": "Bruno Thiry",
+  "nationality": "Belgium",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda", "Subaru", "Ford"],
+  "firstWRCStart": 1989,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "salonen_timo",
+  "name": "Timo Salonen",
+  "nationality": "Finland",
+  "manufacturer": "Mitsubishi Ralliart",
+  "manufacturers": ["Mitsubishi Ralliart", "Mazda", "Peugeot", "Nissan", "Datsun"],
+  "firstWRCStart": 1974,
+  "titles": 1,
+  "wins": 11
+},
+{
+  "id": "andreucci_paolo",
+  "name": "Paolo Andreucci",
+  "nationality": "Italy",
+  "manufacturer": "Ford",
+  "manufacturers": ["Ford", "Lancia"],
+  "firstWRCStart": 1989,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "madeira_rui",
+  "name": "Rui Madeira",
+  "nationality": "Portugal",
+  "manufacturer": "Ford",
+  "manufacturers": ["Ford", "SEAT", "Mitsubishi Ralliart"],
+  "firstWRCStart": 1992,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "wearden_neil",
+  "name": "Neil Wearden",
+  "nationality": "United Kingdom",
+  "manufacturer": "Subaru",
+  "manufacturers": ["Subaru"],
+  "firstWRCStart": 1997,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "taguchi_katsuhiko",
+  "name": "Katsuhiko Taguchi",
+  "nationality": "Japan",
+  "manufacturer": "Mitsubishi Ralliart",
+  "manufacturers": ["Mitsubishi Ralliart"],
+  "firstWRCStart": 1994,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "liatti_piero",
+  "name": "Piero Liatti",
+  "nationality": "Italy",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai", "Ford", "SEAT", "Subaru", "Lancia"],
+  "firstWRCStart": 1990,
+  "titles": 0,
+  "wins": 1
+},
+{
+  "id": "bates_neal",
+  "name": "Neal Bates",
+  "nationality": "Australia",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota"],
+  "firstWRCStart": 1990,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "bourne_possum",
+  "name": "Possum Bourne",
+  "nationality": "New Zealand",
+  "manufacturer": "Subaru",
+  "manufacturers": ["Subaru"],
+  "firstWRCStart": 1983,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "alen_markku",
+  "name": "Markku Alén",
+  "nationality": "Finland",
+  "manufacturer": "Subaru",
+  "manufacturers": ["Subaru", "Toyota", "Lancia", "Fiat"],
+  "firstWRCStart": 1973,
+  "titles": 1,
+  "wins": 19
+},
+{
+  "id": "evans_gwyndaf",
+  "name": "Gwyndaf Evans",
+  "nationality": "United Kingdom",
+  "manufacturer": "SEAT",
+  "manufacturers": ["SEAT", "Ford"],
+  "firstWRCStart": 1987,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "jeanjoseph_simon",
+  "name": "Simon Jean-Joseph",
+  "nationality": "France",
+  "manufacturer": "Subaru",
+  "manufacturers": ["Subaru", "Ford"],
+  "firstWRCStart": 1993,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "sperrer_raphael",
+  "name": "Raphael Sperrer",
+  "nationality": "Austria",
+  "manufacturer": "SEAT",
+  "manufacturers": ["SEAT"],
+  "firstWRCStart": 1994,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "verreydt_renaud",
+  "name": "Renaud Verreydt",
+  "nationality": "Belgium",
+  "manufacturer": "SEAT",
+  "manufacturers": ["SEAT", "Toyota"],
+  "firstWRCStart": 1991,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "lopes_adruzilo",
+  "name": "Adruzilo Lopes",
+  "nationality": "Portugal",
+  "manufacturer": "Peugeot",
+  "manufacturers": ["Peugeot", "Citroën"],
+  "firstWRCStart": 1988,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "climent_luis",
+  "name": "Luís Climent",
+  "nationality": "Spain",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda", "Opel"],
+  "firstWRCStart": 1991,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "guest_michael",
+  "name": "Michael Guest",
+  "nationality": "Australia",
+  "manufacturer": "Hyundai",
+  "manufacturers": ["Hyundai"],
+  "firstWRCStart": 1992,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "recalde_jorge",
+  "name": "Jorge Recalde",
+  "nationality": "Argentina",
+  "manufacturer": "Mitsubishi Ralliart",
+  "manufacturers": ["Mitsubishi Ralliart", "Lancia", "Toyota", "Audi", "Datsun"],
+  "firstWRCStart": 1980,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "aghini_andrea",
+  "name": "Andrea Aghini",
+  "nationality": "Italy",
+  "manufacturer": "Mitsubishi Ralliart",
+  "manufacturers": ["Mitsubishi Ralliart", "Toyota", "Lancia"],
+  "firstWRCStart": 1986,
+  "titles": 0,
+  "wins": 1
+},
+{
+  "id": "alwahaibi_hamed",
+  "name": "Hamed Al-Wahaibi",
+  "nationality": "Oman",
+  "manufacturer": "Mitsubishi Ralliart",
+  "manufacturers": ["Mitsubishi Ralliart"],
+  "firstWRCStart": 1997,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "ordynski_ed",
+  "name": "Ed Ordynski",
+  "nationality": "Australia",
+  "manufacturer": "Mitsubishi Ralliart",
+  "manufacturers": ["Mitsubishi Ralliart"],
+  "firstWRCStart": 1989,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "holderied_isolde",
+  "name": "Isolde Holderied",
+  "nationality": "Germany",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota", "Mitsubishi Ralliart"],
+  "firstWRCStart": 1992,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "brundle_martin",
+  "name": "Martin Brundle",
+  "nationality": "United Kingdom",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota"],
+  "firstWRCStart": 1999,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "sibera_pavel",
+  "name": "Pavel Sibera",
+  "nationality": "Czech Republic",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda"],
+  "firstWRCStart": 1987,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "triner_emil",
+  "name": "Emil Triner",
+  "nationality": "Czech Republic",
+  "manufacturer": "Škoda",
+  "manufacturers": ["Škoda"],
+  "firstWRCStart": 1993,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "duncan_ian",
+  "name": "Ian Duncan",
+  "nationality": "Kenya",
+  "manufacturer": "Toyota",
+  "manufacturers": ["Toyota", "Subaru"],
+  "firstWRCStart": 1983,
+  "titles": 0,
+  "wins": 1
+},
+{
+  "id": "nittel_uwe",
+  "name": "Uwe Nittel",
+  "nationality": "Germany",
+  "manufacturer": "Mitsubishi Ralliart",
+  "manufacturers": ["Mitsubishi Ralliart"],
+  "firstWRCStart": 1994,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "kytolehto_jarmo",
+  "name": "Jarmo Kytölehto",
+  "nationality": "Finland",
+  "manufacturer": "Subaru",
+  "manufacturers": ["Subaru", "Mitsubishi Ralliart"],
+  "firstWRCStart": 1990,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "kangas_juha",
+  "name": "Juha Kangas",
+  "nationality": "Finland",
+  "manufacturer": "Subaru",
+  "manufacturers": ["Subaru"],
+  "firstWRCStart": 1996,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "gomez_oriol",
+  "name": "Oriol Gómez",
+  "nationality": "Spain",
+  "manufacturer": "SEAT",
+  "manufacturers": ["SEAT"],
+  "firstWRCStart": 1991,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "duez_marc",
+  "name": "Marc Duez",
+  "nationality": "Belgium",
+  "manufacturer": "SEAT",
+  "manufacturers": ["SEAT", "Toyota", "Ford", "BMW", "Austin Rover"],
+  "firstWRCStart": 1983,
+  "titles": 0,
+  "wins": 0
+},
+{
+  "id": "cunico_franco",
+  "name": "Franco Cunico",
+  "nationality": "Italy",
+  "manufacturer": "Ford",
+  "manufacturers": ["Ford", "Lancia"],
+  "firstWRCStart": 1981,
+  "titles": 0,
+  "wins": 1
+},
+{
+  "id": "shinozuka_kenjiro",
+  "name": "Kenjiro Shinozuka",
+  "nationality": "Japan",
+  "manufacturer": "Mitsubishi Ralliart",
+  "manufacturers": ["Mitsubishi Ralliart"],
+  "firstWRCStart": 1976,
+  "titles": 0,
+  "wins": 2
+},
+{
+  "id": "medeghini_angelo",
+  "name": "Angelo Medeghini",
+  "nationality": "Italy",
+  "manufacturer": "Ford",
+  "manufacturers": ["Ford"],
+  "firstWRCStart": 1992,
+  "titles": 0,
+  "wins": 0
+}
+]
