@@ -743,8 +743,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const win = endMessage?.startsWith("🏁");
   const header = `WRCdle #${puzzleNumber} ${dateStr} ${win ? `${guesses}/${MAX_GUESSES}` : `X/${MAX_GUESSES}`}`;
-
-  return [header, "", ...lines].join("\n");
+  const url = "https://wrcdle.com";
+  return [header, "", ...lines, "", 'Play: ${url}'].join("\n");
   }
 
   // Share button handler
