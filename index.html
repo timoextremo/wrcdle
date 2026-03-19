@@ -490,6 +490,25 @@
         cursor: pointer;
         z-index: 10;
       }
+
+      .revealed-driver {
+        margin-top: 16px;
+        padding: 12px;
+        background: var(--wrc-dark);
+        border: 1px solid var(--wrc-grey);
+        border-radius: 8px;
+        text-align: left;
+      }
+
+      .revealed-driver h3 {
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: var(--wrc-red);
+      }
+
+      .revealed-driver p {
+        margin: 6px 0;
+      }
     </style>
       <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JD78T1P52D"></script>
@@ -587,6 +606,7 @@
         <h2 id="resultsTitle">Result</h2>
 
         <p id="resultsSummary"></p>
+        <div id="revealedDriverStats"></div>
         <div id="resultsStats"></div>
         <p id="countdown" style="text-align:center; margin-top:10px;"></p>
         <div id="guessDistribution"></div>
