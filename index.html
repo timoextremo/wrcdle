@@ -1,43 +1,609 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>WRCdle – Coming Soon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #0f0f0f, #2b0040);
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3em;
-      letter-spacing: 2px;
-    }
-    p {
-      opacity: 0.8;
-    }
-  </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JD78T1P52D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html lang="en-NZ">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Timo Extremo">
+    <meta name="theme-color" content="#e10600">
+    <title>WRCdle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <style>
+      :root {
+        --wrc-red: #e10600;
+        --wrc-black: #111111;
+        --wrc-dark: #1c1c1c;
+        --wrc-grey: #2a2a2a;
+        --wrc-yellow: #ffd100;
+        --wrc-white: #ffffff;
+      }
 
-  gtag('config', 'G-JD78T1P52D');
-</script>
-</head>
-<body>
-  <div>
-    <h1>WRCdle</h1>
-    <p>Rally knowledge. Daily challenge.</p>
-    <p><strong>Coming Soon.</strong></p>
-  </div>
-</body>
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        overflow-x: hidden;
+      }
+
+      body {
+        background-color: var(--wrc-black);
+        color: var(--wrc-white);
+        font-family: 'Teko', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      input {
+        padding: 12px;
+        font-size: 18px;
+        width: 100%;
+        max-width: 320px; /* desktop cap */
+        border: 2px solid var(--wrc-grey);
+        background-color: var(--wrc-dark);
+        color: white;
+        border-radius: 4px;
+        outline: none;
+      }
+
+      button {
+        padding: 12px 18px;
+        font-size: 18px;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        background-color: var(--wrc-red);
+        color: white;
+        transition: 0.2s ease;
+        vertical-align: middle;
+      }
+
+      button:hover {
+        background-color: #b00500;
+      }
+
+      button:disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+      }
+
+      table {
+        width: 90%;
+        margin: 30px auto;
+        margin-top: 30px;
+        max-width: 1100px;
+        border-collapse: collapse;
+        background-color: var(--wrc-dark);
+        border: 1px;
+      }
+
+      th {
+        padding: 12px;
+        background-color: var(--wrc-grey);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 2px solid #444;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      td {
+        padding: 12px;
+        font-size: 18px;
+        border-bottom: 1px solid #333;
+        text-align: center;
+        vertical-align: middle;
+        animation: flipIn 0.4s ease;
+      }
+
+      tr {
+      animation: fadeIn 0.25s ease-in;
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(5px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes flipIn {
+        0% { transform: rotateX(90deg); opacity: 0; }
+        100% { transform: rotateX(0); opacity: 1; }
+      }
+
+      .correct {
+        background-color: #00c853;
+      }
+
+      .partial {
+        background-color: var(--wrc-yellow);
+        color: black;
+      }
+
+      .wrong {
+        background-color: #c62828;
+      }
+
+      .neutral {
+        background-color: #787c7e;
+        color: white;
+      }
+  
+      #suggestions {
+        position: absolute;
+        top: calc(100% + 6px);
+        left: 0;
+        border: 1px solid var(--wrc-grey);
+        z-index: 1000;
+        color: white;
+        width: 100%; /* match input width */;
+        background-color: var(--wrc-dark);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .suggestion {
+        padding: 10px;
+        cursor: pointer;
+        transition: 0.15s ease;
+        border-bottom: 1px solid var(--wrc-grey);
+      }
+
+      .suggestion:last-child {
+        border-bottom: none;
+      }
+
+      .suggestion:hover {
+        background-color: var(--wrc-red);
+      }
+
+      .suggestion.active {
+        background-color: var(--wrc-red);
+      }
+
+      #suggestions mark {
+        background: var(--wrc-yellow);
+        color: #000;
+        padding: 0 2px;
+        border-radius: 3px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .close:hover {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+
+      .game-container {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 60px;
+        letter-spacing: 2px;
+        color: var(--wrc-red);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      #status {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .accent-bar {
+        height: 6px;
+        width: 200px;
+        margin: 0 auto 25px auto;
+        background: linear-gradient(
+          to right,
+          var(--wrc-red),
+          var(--wrc-yellow)
+        );
+      }
+
+      .manufacturer-logo {
+        height: 22px;
+        margin-right: 8px;
+        vertical-align: middle;
+      }
+
+      td span {
+        vertical-align: middle;
+      }
+
+      .input-wrapper {
+        position: relative;
+        width: 100%;
+        max-width: 320px; /* desktop cap */
+      }
+
+      .input-row {
+        display: flex;
+        justify-content: center;   /* centers whole row */
+        align-items: center;       /* keeps everything same height */
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      #guessInput {
+        height: 50px;
+        padding: 0 15px;
+      }
+
+      .action-btn {
+        height: 50px;
+        padding: 0 20px;
+        background-color: #e10600;
+        color: white;
+        border: none;
+        font-weight: bold;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      #stats {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 18px;
+        line-height: 1.4;
+        color: var(--wrc-white);
+        opacity: 0.7;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      #stats::before {
+        content: "";
+        display: block;
+        width: 120px;
+        height: 2px;
+        margin: 0 auto 8px auto;
+        background: var(--wrc-grey);
+        opacity: 0.4;
+      }
+
+      #guessCards { display: none } 
+
+      #guessTable {display: table; width: 90%;} /* default: table visible */
+
+      .guess-card {
+        background: var(--wrc-dark);
+        border: 1px solid var(--wrc-grey);
+        border-radius: 10px;
+        padding: 12px;
+        margin: 12px auto;
+        max-width: 520px;
+        text-align: left;
+      }
+
+      .guess-card h3 {
+        margin: 0 0 10px 0;
+        font-size: 22px;
+      }
+
+      .card-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 10px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        font-size: 18px;
+      }
+
+      .card-label {
+        opacity: 0.85;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 14px;
+      }
+
+      .card-value {
+        font-weight: 600;
+      }
+
+      @media (max-width: 600px) {
+        body { font-size: 20px; }
+        h1 { font-size: 48px; }
+        .game-container {
+          margin: 20px auto;
+          padding: 12px;
+        }
+        .input-row {
+          flex-direction: column; /* stack vertically */
+          justify-content: center;
+          align-items: center;
+          flex-wrap: nowrap; /* prevent stacking */
+          gap: 10px;
+        }
+        .input-wrapper {
+          max-width: none;
+          width: 100%;
+        }
+        .button-row {
+          display: flex;
+          flex-direction: row;
+          gap: 6px;
+          justify-content: center;
+          width: 100%;
+          flex-wrap: nowrap;
+        }
+        .button-row .action-btn {
+          width: auto;
+          min-width: 70px;
+          height: 46px;
+          font-size: 18px;
+          flex-wrap: nowrap;
+        }
+        #guessInput {
+          width: 100%;
+          max-width: none;
+        }
+        #guessTable {
+          display: none;
+        }
+        #guessCards {
+          display: block;
+          width: 98%;
+          margin: 0 auto;
+        }
+        .suggestion {
+          padding: 14px;
+          font-size: 20px;
+        }
+        #suggestions {
+          max-height: 220px;
+          overflow-y: auto;
+        }
+        .action-btn {
+          font-size: 18px;
+          width: auto; /* not 100% */
+          min-width: 70px;
+          height: 46px;
+          padding: 0 14px;
+          border-radius: 10px;
+        }
+        .action-btn:active {
+          transform: scale(0.96);
+        }
+        table { width: 98%; }
+        th, td { font-size: 16px; padding: 6px; }
+        .modal-content { width: 92%; }
+        .manufacturer-logo { height: 16px; }
+        .action-btn:active {
+          transform: scale(0.97);
+        }
+        .win {
+          animation: pop 0.35s ease;
+        }
+
+        @keyframes pop {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.08); }
+          100% { transform: scale(1); }
+        }
+      }
+
+      .dist-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 6px 0;
+      }
+
+      .dist-row span {
+        width: 20px;
+        text-align: right;
+      }
+
+      .dist-bar {
+        background: var(--wrc-red);
+        color: white;
+        padding: 4px 8px;
+        border-radius: 4px;
+        min-width: 20px;
+        text-align: right;
+      }
+
+      #footerNote {
+        text-align: center;
+        font-size: 14px;
+        opacity: 0.5;
+        margin: 30px 0 20px 0;
+        letter-spacing: 0.5px;
+      }
+
+      @media (max-width: 600px) {
+        #footerNote {
+          font-size: 12px;
+          margin: 20px 0 15px 0;
+        }
+      }
+
+      #footerNote a {
+        color: var(--wrc-yellow);
+        text-decoration: none;
+      }
+
+      #footerNote a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-quote {
+        margin-top: 6px;
+        font-size: 12px;
+        opacity: 0.4;
+        font-style: italic;
+      }
+
+      @media (max-width: 600px) {
+        .footer-quote {
+          font-size: 11px;
+        }
+      }
+
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        overflow-y: auto;
+        z-index: 2000;
+        padding: 16px;
+      }
+
+      .modal.hidden {
+        display: none;
+      }
+      
+      .modal-content {
+        position: relative;
+        background: #111;
+        padding: 20px;
+        border-radius: 8px;
+        width: min(420px, 100%);
+        margin: 16px auto;
+        padding-top: 48px;
+        color: white;
+        max-height: none;
+        overflow: visible;
+      }
+
+      .close {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        font-size: 24px;
+        line-height: 1;
+        padding: 8px 12px;
+        cursor: pointer;
+        z-index: 10;
+      }
+    </style>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JD78T1P52D"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-JD78T1P52D');
+    </script>
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>WRCdle</h1>
+      <div class="accent-bar"></div>
+
+      <!-- Input for guesses -->
+      <div class="input-row">
+
+        <div class="input-wrapper">
+          <input id="guessInput" type="text" placeholder="Enter driver name" autocomplete="off">
+          <div id="suggestions"></div>
+        </div>
+
+        <div class="button-row">
+          <button id="submitGuess" class="action-btn">Guess</button>
+          <button id="helpButton" class="action-btn">❓</button>
+          <button id="shareBtn" class="action-btn">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="guessCards"></div>
+
+    <!-- Table to show guesses -->
+    <table id="guessTable">
+      <thead>
+        <tr>
+          <th>Driver</th>
+          <th>Nationality</th>
+          <th>Manufacturer</th>
+          <th>Titles</th>
+          <th>Wins</th>
+          <th>Debut</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <p id="status"></p>
+
+    <div id="stats"></div>
+
+    <div id="helpModal" class="modal hidden">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>How to Play</h2>
+
+        <p>Guess the WRC driver in 6 tries.*</p>
+
+        <ul>
+          <li>🟩 Green = Correct</li>
+          <li>🟥 Red = Incorrect</li>
+          <li>⬆️ = The correct value is higher</li>
+          <li>⬇️ = The correct value is lower</li>
+        </ul>
+
+        <p><strong>Manufacturer:</strong></p>
+        <ul>
+          <li>🟩 = Current or latest manufacturer/team matches</li>
+          <li>🟨 = Driver has driven for that manufacturer/team before</li>
+          <li>🟥 = Driver has never driven for that manufacturer/team</li>
+        </ul>
+
+        <p>*Eligible to score manufacturer points, or have at least one podium, and have driven in the WRC/Rally 1 era.</p>
+      </div>
+    </div>  
+    <div id="shareModal" class="modal hidden">
+      <div class="modal-content">
+        <span id="closeShareModal" class="close">&times;</span>
+        <h2>Share your result</h2>
+
+        <textarea id="shareText" rows="8" readonly style="width:100%;"></textarea>
+
+        <div style="display:flex; gap:10px; margin-top:12px; justify-content:center;">
+          <button id="copyShare" class="action-btn">Copy</button>
+          <button id="nativeShare" class="action-btn">Share</button>
+        </div>
+
+        <p id="shareStatus" style="text-align:center; margin-top:10px;"></p>
+      </div>
+    </div>
+    <div id="resultsModal" class="modal hidden">
+      <div class="modal-content">
+        <span id="closeResultsModal" class="close">&times;</span>
+        <h2 id="resultsTitle">Result</h2>
+
+        <p id="resultsSummary"></p>
+        <div id="resultsStats"></div>
+        <p id="countdown" style="text-align:center; margin-top:10px;"></p>
+        <div id="guessDistribution"></div>
+
+        <div style="display:flex; gap:10px; margin-top:16px; justify-content:center;">
+          <button id="resultsShareBtn" class="action-btn">Share</button>
+        </div>
+      </div>
+    </div>
+    <script src="game.js"></script>
+    <div id="footerNote">
+      <div>WRCdle v1.0 • Service Park Support:
+        <a href="mailto:timo@wrcdle.com">timo@wrcdle.com</a>
+      </div>
+      <div class="footer-quote">
+        “The speed was OK, but the corner was too tight.”
+      </div>
+    </div>
+  </body>
 </html>
