@@ -215,7 +215,8 @@ document.addEventListener("DOMContentLoaded", () => {
       };
     } catch {
       return defaults;
-  }}
+    }
+  }
 
   function saveStats(stats) {
     localStorage.setItem(statsKey(), JSON.stringify(stats));
