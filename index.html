@@ -576,9 +576,17 @@
 
         <ul>
           <li>🟩 Green = Correct</li>
+          <li>🟨 Yellow = Close match (where available)</li>
           <li>🟥 Red = Incorrect</li>
           <li>⬆️ = The correct value is higher</li>
           <li>⬇️ = The correct value is lower</li>
+        </ul>
+
+        <p><strong>Nationality:</strong></p>
+        <ul>
+          <li>🟩 = Same country</li>
+          <li>🟨 = Nearby country on the same continent</li>
+          <li>🟥 = Different continent or too far away</li>
         </ul>
 
         <p><strong>Manufacturer:</strong></p>
@@ -586,6 +594,14 @@
           <li>🟩 = Current or latest manufacturer/team matches</li>
           <li>🟨 = Driver has driven for that manufacturer/team before</li>
           <li>🟥 = Driver has never driven for that manufacturer/team</li>
+        </ul>
+
+        <p><strong>Debut:</strong></p>
+        <ul>
+          <li>🟩 = Exact WRC debut year</li>
+          <li>🟨 = Within 5 years of the correct debut year</li>
+          <li>🟥 = More than 5 years away</li>
+          <li>⬆️ / ⬇️ = Correct debut year is higher or lower</li>
         </ul>
 
         <p>*Eligible to score manufacturer points, or have at least one podium, and have driven in the WRC/Rally 1 era.</p>
@@ -624,7 +640,7 @@
     </div>
     <script src="game.js"></script>
     <div id="footerNote">
-      <div>WRCdle v1.0 • Service Park Support:
+      <div>WRCdle v1.1 • Service Park Support:
         <a href="mailto:timo@wrcdle.com">timo@wrcdle.com</a>
       </div>
       <div class="footer-quote">
