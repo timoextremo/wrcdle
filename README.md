@@ -12,10 +12,33 @@ Guess the mystery WRC driver in **six tries** using feedback on nationality, man
 
 Each guess gives you a set of clues:
 
-- 🟩 **Green** — correct
-- 🟥 **Red** — incorrect
-- 🟨 **Yellow manufacturer/team** — the mystery driver has driven for that manufacturer/team before
-- ⬆️ / ⬇️ — the mystery driver's value is higher or lower
+- 🟩 **Green** — exact match
+- 🟨 **Yellow** — close match where that clue supports proximity
+- 🟥 **Red** — incorrect / not close enough
+- ⬆️ / ⬇️ — the mystery driver's numeric value is higher or lower
+
+### Nationality
+
+- 🟩 Same country
+- 🟨 A geographically nearby country on the same continent
+- 🟥 Different continent, or too far away
+
+WRCdle uses representative country coordinates and continent-specific distance thresholds. Europe deliberately uses a tighter threshold so the heavily European driver pool does not make most nationality guesses yellow.
+
+### Manufacturer / team
+
+- 🟩 Current or latest manufacturer/team matches
+- 🟨 The mystery driver has driven for that manufacturer/team before
+- 🟥 The mystery driver has never driven for that manufacturer/team
+
+### WRC debut
+
+- 🟩 Exact debut year
+- 🟨 Within **5 years** of the correct debut year
+- 🟥 More than 5 years away
+- ⬆️ / ⬇️ still shows whether the correct year is higher or lower
+
+Titles and rally wins remain exact-match clues, with ⬆️ / ⬇️ indicating whether the correct value is higher or lower.
 
 A new puzzle is available each day. Your game state, stats, streak and guess distribution are stored locally in your browser, so no account is required.
 
@@ -42,6 +65,8 @@ A driver entry follows this general structure:
 
 The game validates the driver data on load and reports duplicate IDs, missing required fields and invalid values in the browser console.
 
+When adding a driver from a nationality not already represented in the game, also add that country to the `nationalityGeo` map in `game.js` so nationality proximity feedback can work correctly.
+
 ## Daily puzzle selection
 
 The daily driver is selected using a deterministic seeded shuffle, so players receive the same puzzle for a given day while the order still feels random.
@@ -54,7 +79,9 @@ The daily driver is selected using a deterministic seeded shuffle, so players re
 - Six guesses per day
 - Desktop table and mobile card layouts
 - Autocomplete with keyboard navigation
+- Nationality proximity feedback
 - Manufacturer/team history feedback
+- ±5-year WRC debut proximity feedback
 - Persistent game state using `localStorage`
 - Win rate, streaks and guess distribution
 - Results modal and daily countdown
