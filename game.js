@@ -757,7 +757,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function buildShareText() {
   const puzzleNumber = getDisplayPuzzleNumber(); // you already have this helper
-  const dateStr = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+  const now = new Date();
+  const dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`; // local YYYY-MM-DD
 
   // Use 5 columns (exclude "driver")
   const cols = ["nationality", "manufacturer", "titles", "wins", "debut"];
