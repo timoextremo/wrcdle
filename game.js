@@ -245,6 +245,55 @@ document.addEventListener("DOMContentLoaded", () => {
     "Munchi's Ford": "images/logos/munchis.png"
   };
 
+  // Representative country coordinates (mostly capitals) for nationality proximity clues.
+  // Nationalities are uppercased by the validator before comparison.
+  const nationalityGeo = {
+    "IRELAND": { lat: 53.3498, lon: -6.2603, continent: "EUROPE" },
+    "FINLAND": { lat: 60.1699, lon: 24.9384, continent: "EUROPE" },
+    "SPAIN": { lat: 40.4168, lon: -3.7038, continent: "EUROPE" },
+    "FRANCE": { lat: 48.8566, lon: 2.3522, continent: "EUROPE" },
+    "BELGIUM": { lat: 50.8503, lon: 4.3517, continent: "EUROPE" },
+    "NEW ZEALAND": { lat: -41.2866, lon: 174.7756, continent: "OCEANIA" },
+    "JAPAN": { lat: 35.6762, lon: 139.6503, continent: "ASIA" },
+    "UNITED KINGDOM": { lat: 51.5074, lon: -0.1278, continent: "EUROPE" },
+    "SWEDEN": { lat: 59.3293, lon: 18.0686, continent: "EUROPE" },
+    "LUXEMBOURG": { lat: 49.6116, lon: 6.1319, continent: "EUROPE" },
+    "ESTONIA": { lat: 59.4370, lon: 24.7536, continent: "EUROPE" },
+    "NORWAY": { lat: 59.9139, lon: 10.7522, continent: "EUROPE" },
+    "UNITED ARAB EMIRATES": { lat: 24.4539, lon: 54.3773, continent: "ASIA" },
+    "UNITED STATES OF AMERICA": { lat: 38.9072, lon: -77.0369, continent: "NORTH_AMERICA" },
+    "SAUDI ARABIA": { lat: 24.7136, lon: 46.6753, continent: "ASIA" },
+    "CZECH REPUBLIC": { lat: 50.0755, lon: 14.4378, continent: "EUROPE" },
+    "NETHERLANDS": { lat: 52.3676, lon: 4.9041, continent: "EUROPE" },
+    "POLAND": { lat: 52.2297, lon: 21.0122, continent: "EUROPE" },
+    "AUSTRALIA": { lat: -35.2809, lon: 149.1300, continent: "OCEANIA" },
+    "RUSSIA": { lat: 55.7558, lon: 37.6173, continent: "EUROPE" },
+    "ARGENTINA": { lat: -34.6037, lon: -58.3816, continent: "SOUTH_AMERICA" },
+    "BRAZIL": { lat: -15.7939, lon: -47.8828, continent: "SOUTH_AMERICA" },
+    "QATAR": { lat: 25.2854, lon: 51.5310, continent: "ASIA" },
+    "TRINIDAD AND TOBAGO": { lat: 10.6549, lon: -61.5019, continent: "NORTH_AMERICA" },
+    "SOUTH AFRICA": { lat: -25.7479, lon: 28.2293, continent: "AFRICA" },
+    "AUSTRIA": { lat: 48.2082, lon: 16.3738, continent: "EUROPE" },
+    "PORTUGAL": { lat: 38.7223, lon: -9.1393, continent: "EUROPE" },
+    "GERMANY": { lat: 52.5200, lon: 13.4050, continent: "EUROPE" },
+    "ZIMBABWE": { lat: -17.8252, lon: 31.0335, continent: "AFRICA" },
+    "ITALY": { lat: 41.9028, lon: 12.4964, continent: "EUROPE" },
+    "GREECE": { lat: 37.9838, lon: 23.7275, continent: "EUROPE" },
+    "OMAN": { lat: 23.5880, lon: 58.3829, continent: "ASIA" },
+    "KENYA": { lat: -1.2921, lon: 36.8219, continent: "AFRICA" }
+  };
+
+  // Tighter in Europe so most European guesses do not become yellow;
+  // wider thresholds suit the larger geographic scale of South America/Oceania.
+  const nationalityYellowKm = {
+    EUROPE: 1500,
+    ASIA: 1500,
+    AFRICA: 2000,
+    NORTH_AMERICA: 2000,
+    SOUTH_AMERICA: 3000,
+    OCEANIA: 3000
+  };
+
   const input = document.getElementById("guessInput");
   const suggestions = document.getElementById("suggestions");
   const submitButton = document.getElementById("submitGuess");
@@ -369,14 +418,58 @@ document.addEventListener("DOMContentLoaded", () => {
   input.focus();
 
   }
-  function compareValue(guess, answer) {
-  return guess === answer ? { value: guess, class: "correct" }
-                          : { value: guess, class: "wrong" };
-  }
 
   function compareNumber(guess, answer) {
   if (guess === answer) return { value: guess, class: "correct" };
   return { value: `${guess} ${guess < answer ? "⬆️" : "⬇️"}`, class: "wrong" };
+  }
+
+  function compareDebut(guess, answer) {
+    if (guess === answer) return { value: guess, class: "correct" };
+
+    const difference = Math.abs(guess - answer);
+    const arrow = guess < answer ? "⬆️" : "⬇️";
+
+    return {
+      value: `${guess} ${arrow}`,
+      class: difference <= 5 ? "partial" : "wrong"
+    };
+  }
+
+  function distanceKm(a, b) {
+    const toRadians = degrees => degrees * Math.PI / 180;
+    const earthRadiusKm = 6371;
+    const lat1 = toRadians(a.lat);
+    const lat2 = toRadians(b.lat);
+    const deltaLat = toRadians(b.lat - a.lat);
+    const deltaLon = toRadians(b.lon - a.lon);
+
+    const haversine =
+      Math.sin(deltaLat / 2) ** 2 +
+      Math.cos(lat1) * Math.cos(lat2) * Math.sin(deltaLon / 2) ** 2;
+
+    return 2 * earthRadiusKm * Math.asin(Math.sqrt(haversine));
+  }
+
+  function compareNationality(guess, answer) {
+    if (guess === answer) {
+      return { value: guess, class: "correct" };
+    }
+
+    const guessGeo = nationalityGeo[guess];
+    const answerGeo = nationalityGeo[answer];
+
+    if (!guessGeo || !answerGeo || guessGeo.continent !== answerGeo.continent) {
+      return { value: guess, class: "wrong" };
+    }
+
+    const threshold = nationalityYellowKm[guessGeo.continent] ?? 1500;
+    const distance = distanceKm(guessGeo, answerGeo);
+
+    return {
+      value: guess,
+      class: distance <= threshold ? "partial" : "wrong"
+    };
   }
 
   function compareManufacturer(guess, answer) {
@@ -395,11 +488,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   return {
     driver: { value: guess.name, class: "neutral" },
-    nationality: compareValue(guess.nationality, chosenDriver.nationality),
+    nationality: compareNationality(guess.nationality, chosenDriver.nationality),
     manufacturer: compareManufacturer(guess, chosenDriver),
     titles: compareNumber(guess.titles, chosenDriver.titles),
     wins: compareNumber(guess.wins, chosenDriver.wins),
-    debut: compareNumber(guess.firstWRCStart, chosenDriver.firstWRCStart)
+    debut: compareDebut(guess.firstWRCStart, chosenDriver.firstWRCStart)
     };
   }
 
@@ -741,7 +834,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Click outside closes suggestions (you already have this, but ensure it calls clearSuggestions)
+  // Click outside closes suggestions
   document.addEventListener("click", (e) => {
     const isInside = input.contains(e.target) || suggestions.contains(e.target);
     if (!isInside) clearSuggestions();
@@ -756,7 +849,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function buildShareText() {
-  const puzzleNumber = getDisplayPuzzleNumber(); // you already have this helper
+  const puzzleNumber = getDisplayPuzzleNumber();
   const now = new Date();
   const dateStr = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`; // local YYYY-MM-DD
 
