@@ -286,7 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Tighter in Europe so most European guesses do not become yellow;
   // wider thresholds suit the larger geographic scale of South America/Oceania.
   const nationalityYellowKm = {
-    EUROPE: 1500,
+    EUROPE: 1850,
     ASIA: 1500,
     AFRICA: 2000,
     NORTH_AMERICA: 2000,
