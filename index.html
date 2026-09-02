@@ -221,6 +221,16 @@
         vertical-align: middle;
       }
 
+      .country-flag {
+        width: 24px;
+        height: 18px;
+        margin-right: 8px;
+        vertical-align: -3px;
+        border-radius: 2px;
+        object-fit: cover;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18);
+      }
+
       td span {
         vertical-align: middle;
       }
@@ -384,6 +394,12 @@
         th, td { font-size: 16px; padding: 6px; }
         .modal-content { width: 92%; }
         .manufacturer-logo { height: 16px; }
+        .country-flag {
+          width: 22px;
+          height: 16px;
+          margin-right: 7px;
+          vertical-align: -2px;
+        }
         .action-btn:active {
           transform: scale(0.97);
         }
@@ -640,6 +656,106 @@
       </div>
     </div>
     <script src="game.js"></script>
+    <script>
+      (() => {
+        const nationalityCodes = {
+          "IRELAND": "ie",
+          "FINLAND": "fi",
+          "SPAIN": "es",
+          "FRANCE": "fr",
+          "BELGIUM": "be",
+          "NEW ZEALAND": "nz",
+          "JAPAN": "jp",
+          "UNITED KINGDOM": "gb",
+          "SWEDEN": "se",
+          "LUXEMBOURG": "lu",
+          "ESTONIA": "ee",
+          "NORWAY": "no",
+          "UNITED ARAB EMIRATES": "ae",
+          "UNITED STATES OF AMERICA": "us",
+          "SAUDI ARABIA": "sa",
+          "CZECH REPUBLIC": "cz",
+          "NETHERLANDS": "nl",
+          "POLAND": "pl",
+          "AUSTRALIA": "au",
+          "RUSSIA": "ru",
+          "ARGENTINA": "ar",
+          "BRAZIL": "br",
+          "QATAR": "qa",
+          "TRINIDAD AND TOBAGO": "tt",
+          "SOUTH AFRICA": "za",
+          "AUSTRIA": "at",
+          "PORTUGAL": "pt",
+          "GERMANY": "de",
+          "ZIMBABWE": "zw",
+          "ITALY": "it",
+          "GREECE": "gr",
+          "OMAN": "om",
+          "KENYA": "ke"
+        };
+
+        function makeFlag(country) {
+          const code = nationalityCodes[String(country).trim().toUpperCase()];
+          if (!code) return null;
+
+          const img = document.createElement("img");
+          img.className = "country-flag";
+          img.src = `https://flagcdn.com/24x18/${code}.png`;
+          img.srcset = `https://flagcdn.com/48x36/${code}.png 2x`;
+          img.alt = "";
+          img.setAttribute("aria-hidden", "true");
+          img.addEventListener("error", () => img.remove(), { once: true });
+          return img;
+        }
+
+        function enhanceNationalityFlags() {
+          document.querySelectorAll("#guessTable tbody tr").forEach(row => {
+            const cell = row.cells?.[1];
+            if (!cell || cell.dataset.flagged === "true") return;
+
+            const country = cell.textContent.trim();
+            const flag = makeFlag(country);
+            if (!flag) return;
+
+            cell.prepend(flag);
+            cell.dataset.flagged = "true";
+          });
+
+          document.querySelectorAll("#guessCards .card-row").forEach(row => {
+            const label = row.querySelector(".card-label");
+            const value = row.querySelector(".card-value");
+            if (!label || !value || value.dataset.flagged === "true") return;
+            if (label.textContent.trim().toLowerCase() !== "nationality") return;
+
+            const country = value.textContent.trim();
+            const flag = makeFlag(country);
+            if (!flag) return;
+
+            value.prepend(flag);
+            value.dataset.flagged = "true";
+          });
+
+          document.querySelectorAll(".revealed-driver p").forEach(p => {
+            if (p.dataset.flagged === "true") return;
+            const strong = p.querySelector("strong");
+            if (!strong || strong.textContent.trim().toLowerCase() !== "nationality:") return;
+
+            const country = p.textContent.replace(/^Nationality:\s*/i, "").trim();
+            const flag = makeFlag(country);
+            if (!flag) return;
+
+            strong.after(document.createTextNode(" "), flag);
+            p.dataset.flagged = "true";
+          });
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+          enhanceNationalityFlags();
+          const observer = new MutationObserver(enhanceNationalityFlags);
+          observer.observe(document.body, { childList: true, subtree: true });
+        });
+      })();
+    </script>
     <div id="footerNote">
       <div>WRCdle v1.1 • Service Park Support:
         <a href="mailto:timo@wrcdle.com">timo@wrcdle.com</a>
