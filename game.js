@@ -242,7 +242,14 @@ document.addEventListener("DOMContentLoaded", () => {
     "Volkswagen": "images/logos/volkswagen.png",
     "DMACK WRT": "images/logos/dmack.png",
     "Ford": "images/logos/ford.jpg",
-    "Munchi's Ford": "images/logos/munchis.png"
+    "Munchi's Ford": "images/logos/munchis.png",
+    "Škoda": "https://upload.wikimedia.org/wikipedia/commons/5/52/%C5%A0koda_Auto.svg",
+    "Peugeot": "https://upload.wikimedia.org/wikipedia/commons/2/28/Peugeot_logo.svg",
+    "Subaru": "https://upload.wikimedia.org/wikipedia/commons/4/47/Subaru_logo.svg",
+    "Mitsubishi Ralliart": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Ralliart_Logo_%28transparent%29.svg",
+    "SEAT": "https://upload.wikimedia.org/wikipedia/commons/f/fc/SEAT_Logo_from_2017.svg",
+    "Suzuki": "https://upload.wikimedia.org/wikipedia/commons/b/be/Suzuki_logo.svg",
+    "Mini": "https://upload.wikimedia.org/wikipedia/commons/e/e9/MINI_logo.svg"
   };
 
   // Representative country coordinates (mostly capitals) for nationality proximity clues.
@@ -1032,7 +1039,7 @@ document.addEventListener("DOMContentLoaded", () => {
   closeModal.addEventListener("click", () => helpModal.classList.add("hidden"));
 
   window.addEventListener("click", (e) => {
-    if (e.target === helpModal) helpModal.classList.add("hidden");
+    if (e.target === helpModal) helpModal.classList.add("hidden"));
   });
 
   if (!localStorage.getItem("wrcdle_seen_help")) {
