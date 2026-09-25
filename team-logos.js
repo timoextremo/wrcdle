@@ -1,23 +1,23 @@
 (() => {
   // Historical/team-specific logo presentation layer.
-  // Exact team marks are used where a clean source is available. Where a
-  // standalone historical team mark is unavailable, use the team's primary
-  // WRC-era manufacturer/sponsor mark rather than inventing a logo.
+  // Prefer SVG sources where a trustworthy vector exists. For obscure historic
+  // teams without a surviving clean vector, use an authentic team/sponsor mark
+  // or the WRC-era manufacturer mark rather than inventing a logo.
   const teamLogoSources = {
     "Ford": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_logo.svg",
-      fallback: "images/logos/ford.jpg"
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_Motor_Company_Logo.svg",
+      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_logo.svg"
     },
     "Monster WRT": {
       src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Logo_Monster_Energy.webp",
-      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_logo.svg"
+      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_Motor_Company_Logo.svg"
     },
     "Yazeed Racing": {
       src: "https://yazeedracing.com/wp-content/uploads/2020/12/yazeed_logo-1-300x181.png"
     },
     "Jipocar Czech": {
       src: "https://www.jipocar.cz/sources/images/logo.png",
-      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_logo.svg"
+      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_Motor_Company_Logo.svg"
     },
     "Lotos Team": {
       src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lotos_logo.svg",
@@ -28,10 +28,10 @@
     },
     "FERM Power Tools": {
       src: "https://upload.wikimedia.org/wikipedia/en/3/34/FERMlogo.png",
-      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_logo.svg"
+      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_Motor_Company_Logo.svg"
     },
     "Adapta WRT": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_logo.svg"
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_Motor_Company_Logo.svg"
     },
     "Mini Portugal": {
       src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/MINI_logo.svg"
@@ -44,10 +44,11 @@
       src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citro%C3%ABn.svg"
     },
     "Qatar WRT": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_logo.svg"
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_Motor_Company_Logo.svg"
     },
     "Red Bull Škoda": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Logo_of_Red_bull.svg"
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Logo_of_Red_bull.svg",
+      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/%C5%A0koda_Auto.svg"
     },
     "Kronos Citroën": {
       src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citro%C3%ABn.svg"
@@ -59,10 +60,12 @@
       src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citro%C3%ABn.svg"
     },
     "Team Abu Dhabi": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citro%C3%ABn.svg"
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Abu_Dhabi_Logo.svg",
+      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citro%C3%ABn.svg"
     },
     "OMV Peugeot Norway": {
-      src: "https://upload.wikimedia.org/wikipedia/commons/2/28/Peugeot_logo.svg"
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Omv_logo.svg",
+      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Peugeot_logo.svg"
     },
     "Armindo Araújo WRT": {
       src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/MINI_logo.svg"
@@ -71,6 +74,12 @@
       src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/MINI_logo.svg"
     }
   };
+
+  function styleLogo(img) {
+    img.style.width = "auto";
+    img.style.maxWidth = "72px";
+    img.style.objectFit = "contain";
+  }
 
   function buildLogo(team, entry, owner) {
     const img = document.createElement("img");
@@ -81,6 +90,7 @@
     img.decoding = "async";
     img.referrerPolicy = "no-referrer";
     img.dataset.teamLogo = team;
+    styleLogo(img);
 
     img.addEventListener("error", () => {
       if (entry.fallback && img.dataset.usedFallback !== "true") {
@@ -110,6 +120,7 @@
       existing.dataset.teamLogo = team;
       existing.dataset.usedFallback = "false";
       existing.referrerPolicy = "no-referrer";
+      styleLogo(existing);
       existing.addEventListener("error", () => {
         if (entry.fallback && existing.dataset.usedFallback !== "true") {
           existing.dataset.usedFallback = "true";
@@ -128,7 +139,20 @@
     owner.prepend(img);
   }
 
+  function makeExistingLogosSafe() {
+    document.querySelectorAll(".manufacturer-logo").forEach(img => {
+      styleLogo(img);
+      if (img.dataset.logoSafetyAttached === "true") return;
+      img.dataset.logoSafetyAttached = "true";
+      img.addEventListener("error", () => {
+        if (!img.dataset.teamLogo) img.remove();
+      });
+    });
+  }
+
   function enhanceTeamLogos() {
+    makeExistingLogosSafe();
+
     // Desktop guess table.
     document.querySelectorAll("#guessTable tbody tr").forEach(row => {
       const cell = row.cells?.[2];
