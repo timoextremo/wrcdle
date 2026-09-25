@@ -1,78 +1,48 @@
 (() => {
   // Historical/team-specific logo presentation layer.
-  // Prefer SVG sources where a trustworthy vector exists. For obscure historic
-  // teams without a surviving clean vector, use an authentic team/sponsor mark
-  // or the WRC-era manufacturer mark rather than inventing a logo.
+  // All logo paths are kept inside the WRCdle repo. Where a clean standalone
+  // historic team mark is not available, use the team's WRC-era manufacturer
+  // mark rather than depending on a fragile third-party hotlink.
   const teamLogoSources = {
-    "Ford": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_Motor_Company_Logo.svg",
-      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_logo.svg"
-    },
-    "Monster WRT": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Logo_Monster_Energy.webp",
-      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_Motor_Company_Logo.svg"
-    },
-    "Yazeed Racing": {
-      src: "https://yazeedracing.com/wp-content/uploads/2020/12/yazeed_logo-1-300x181.png"
-    },
-    "Jipocar Czech": {
-      src: "https://www.jipocar.cz/sources/images/logo.png",
-      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_Motor_Company_Logo.svg"
-    },
-    "Lotos Team": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Lotos_logo.svg",
-      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/MINI_logo.svg"
-    },
-    "Brazil WRT": {
-      src: "https://upload.wikimedia.org/wikipedia/en/thumb/d/da/BrazilWRTlogo.jpg/250px-BrazilWRTlogo.jpg"
-    },
-    "FERM Power Tools": {
-      src: "https://upload.wikimedia.org/wikipedia/en/3/34/FERMlogo.png",
-      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_Motor_Company_Logo.svg"
-    },
-    "Adapta WRT": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_Motor_Company_Logo.svg"
-    },
-    "Mini Portugal": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/MINI_logo.svg"
-    },
-    "Van Merksteijn Motorsport": {
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Logo-Merksteijn-2008.jpg/250px-Logo-Merksteijn-2008.jpg",
-      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citro%C3%ABn.svg"
-    },
-    "Ice 1": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citro%C3%ABn.svg"
-    },
-    "Qatar WRT": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Ford_Motor_Company_Logo.svg"
-    },
-    "Red Bull Škoda": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Logo_of_Red_bull.svg",
-      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/%C5%A0koda_Auto.svg"
-    },
-    "Kronos Citroën": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citro%C3%ABn.svg"
-    },
+    "Ford": { src: "images/logos/ford.svg" },
+    "Škoda": { src: "images/logos/skoda.svg" },
+    "Peugeot": { src: "images/logos/peugeot.svg" },
+    "Subaru": { src: "images/logos/subaru.svg" },
+    "Mitsubishi Ralliart": { src: "images/logos/mitsubishi.svg" },
+    "SEAT": { src: "images/logos/seat.svg" },
+    "Suzuki": { src: "images/logos/suzuki.svg" },
+    "Mini": { src: "images/logos/mini.svg" },
 
-    // Historical aliases kept ready for any future visual treatment of the
-    // full previous-team list in the results panel.
-    "Petter Solberg WRT": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citro%C3%ABn.svg"
-    },
-    "Team Abu Dhabi": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Abu_Dhabi_Logo.svg",
-      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Citro%C3%ABn.svg"
-    },
-    "OMV Peugeot Norway": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Omv_logo.svg",
-      fallback: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Peugeot_logo.svg"
-    },
-    "Armindo Araújo WRT": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/MINI_logo.svg"
-    },
-    "Palmeirinha Rally": {
-      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/MINI_logo.svg"
-    }
+    // Historic/private teams. Use a local team asset when we already have one;
+    // otherwise use the relevant WRC-era manufacturer mark.
+    "Monster WRT": { src: "images/logos/ford.svg" },
+    "Yazeed Racing": { src: "images/logos/ford.svg" },
+    "Jipocar Czech": { src: "images/logos/ford.svg" },
+    "Lotos Team": { src: "images/logos/ford.svg" },
+    "Brazil WRT": { src: "images/logos/mini.svg" },
+    "FERM Power Tools": { src: "images/logos/ford.svg" },
+    "Adapta WRT": { src: "images/logos/ford.svg" },
+    "Mini Portugal": { src: "images/logos/mini.svg" },
+    "Van Merksteijn Motorsport": { src: "images/logos/citroen.png" },
+    "Ice 1": { src: "images/logos/citroen.png" },
+    "Qatar WRT": { src: "images/logos/ford.svg" },
+    "Red Bull Škoda": { src: "images/logos/skoda.svg" },
+    "Kronos Citroën": { src: "images/logos/citroen.png" },
+    "Petter Solberg WRT": { src: "images/logos/citroen.png" },
+    "Team Abu Dhabi": { src: "images/logos/citroen.png" },
+    "OMV Peugeot Norway": { src: "images/logos/peugeot.svg" },
+    "Armindo Araújo WRT": { src: "images/logos/mini.svg" },
+    "Palmeirinha Rally": { src: "images/logos/mini.svg" },
+
+    // Existing local team assets.
+    "M-Sport": { src: "images/logos/m-sport.png" },
+    "Hyundai 2C Compétition": { src: "images/logos/2c_competition.png" },
+    "DMACK WRT": { src: "images/logos/dmack.png" },
+    "Munchi's Ford": { src: "images/logos/munchis.png" },
+    "Toyota": { src: "images/logos/toyota.png" },
+    "Hyundai": { src: "images/logos/hyundai.png" },
+    "Citroën": { src: "images/logos/citroen.png" },
+    "Volkswagen": { src: "images/logos/volkswagen.png" }
   };
 
   function styleLogo(img) {
@@ -88,20 +58,13 @@
     img.setAttribute("aria-hidden", "true");
     img.loading = "lazy";
     img.decoding = "async";
-    img.referrerPolicy = "no-referrer";
     img.dataset.teamLogo = team;
     styleLogo(img);
 
     img.addEventListener("error", () => {
-      if (entry.fallback && img.dataset.usedFallback !== "true") {
-        img.dataset.usedFallback = "true";
-        img.src = entry.fallback;
-        return;
-      }
-
       owner.dataset.teamLogoFailed = team;
       img.remove();
-    });
+    }, { once: true });
 
     img.src = entry.src;
     return img;
@@ -115,44 +78,22 @@
     const existing = owner.querySelector(".manufacturer-logo");
 
     if (existing) {
-      if (existing.dataset.teamLogo === team) return;
+      if (existing.dataset.teamLogo === team && existing.src.endsWith(entry.src)) return;
 
       existing.dataset.teamLogo = team;
-      existing.dataset.usedFallback = "false";
-      existing.referrerPolicy = "no-referrer";
       styleLogo(existing);
       existing.addEventListener("error", () => {
-        if (entry.fallback && existing.dataset.usedFallback !== "true") {
-          existing.dataset.usedFallback = "true";
-          existing.src = entry.fallback;
-          return;
-        }
-
         owner.dataset.teamLogoFailed = team;
         existing.remove();
-      }, { once: false });
+      }, { once: true });
       existing.src = entry.src;
       return;
     }
 
-    const img = buildLogo(team, entry, owner);
-    owner.prepend(img);
-  }
-
-  function makeExistingLogosSafe() {
-    document.querySelectorAll(".manufacturer-logo").forEach(img => {
-      styleLogo(img);
-      if (img.dataset.logoSafetyAttached === "true") return;
-      img.dataset.logoSafetyAttached = "true";
-      img.addEventListener("error", () => {
-        if (!img.dataset.teamLogo) img.remove();
-      });
-    });
+    owner.prepend(buildLogo(team, entry, owner));
   }
 
   function enhanceTeamLogos() {
-    makeExistingLogosSafe();
-
     // Desktop guess table.
     document.querySelectorAll("#guessTable tbody tr").forEach(row => {
       const cell = row.cells?.[2];
