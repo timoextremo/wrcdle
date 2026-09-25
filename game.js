@@ -241,15 +241,15 @@ document.addEventListener("DOMContentLoaded", () => {
     "Citroën": "images/logos/citroen.png",
     "Volkswagen": "images/logos/volkswagen.png",
     "DMACK WRT": "images/logos/dmack.png",
-    "Ford": "images/logos/ford.jpg",
+    "Ford": "images/logos/ford.svg",
     "Munchi's Ford": "images/logos/munchis.png",
-    "Škoda": "https://upload.wikimedia.org/wikipedia/commons/5/52/%C5%A0koda_Auto.svg",
-    "Peugeot": "https://upload.wikimedia.org/wikipedia/commons/2/28/Peugeot_logo.svg",
-    "Subaru": "https://upload.wikimedia.org/wikipedia/commons/4/47/Subaru_logo.svg",
-    "Mitsubishi Ralliart": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Ralliart_Logo_%28transparent%29.svg",
-    "SEAT": "https://upload.wikimedia.org/wikipedia/commons/f/fc/SEAT_Logo_from_2017.svg",
-    "Suzuki": "https://upload.wikimedia.org/wikipedia/commons/b/be/Suzuki_logo.svg",
-    "Mini": "https://upload.wikimedia.org/wikipedia/commons/e/e9/MINI_logo.svg"
+    "Škoda": "images/logos/skoda.svg",
+    "Peugeot": "images/logos/peugeot.svg",
+    "Subaru": "images/logos/subaru.svg",
+    "Mitsubishi Ralliart": "images/logos/mitsubishi.svg",
+    "SEAT": "images/logos/seat.svg",
+    "Suzuki": "images/logos/suzuki.svg",
+    "Mini": "images/logos/mini.svg"
   };
 
   // Representative country coordinates (mostly capitals) for nationality proximity clues.
