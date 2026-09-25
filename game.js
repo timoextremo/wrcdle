@@ -1039,7 +1039,7 @@ document.addEventListener("DOMContentLoaded", () => {
   closeModal.addEventListener("click", () => helpModal.classList.add("hidden"));
 
   window.addEventListener("click", (e) => {
-    if (e.target === helpModal) helpModal.classList.add("hidden"));
+    if (e.target === helpModal) helpModal.classList.add("hidden");
   });
 
   if (!localStorage.getItem("wrcdle_seen_help")) {
