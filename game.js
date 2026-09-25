@@ -241,7 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "Citroën": "images/logos/citroen.png",
     "Volkswagen": "images/logos/volkswagen.png",
     "DMACK WRT": "images/logos/dmack.png",
-    "Ford": "images/logos/ford.png",
+    "Ford": "images/logos/ford.jpg",
     "Munchi's Ford": "images/logos/munchis.png"
   };
 
